@@ -20,8 +20,8 @@ public class WaitersTests extends BaseTestClass {
 
         driver.findElement(By.id("start")).findElement(By.xpath(".//button")).click();
 
-        webDriverWait.until(ExpectedConditions.visibilityOfElementLocated(By.id("loading")));
-        webDriverWait.until(ExpectedConditions.invisibilityOfElementLocated(By.id("loading")));
+        webDriverWait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("loading")));
+        webDriverWait.until(ExpectedConditions.invisibilityOfElementLocated(By.cssSelector("loading")));
 
         Assert.assertEquals(driver.findElement(By.cssSelector("#finish > h4")).getText(), "Hello World!");
 
